@@ -1,5 +1,6 @@
 console.log("Attempting to inject script")
 
+var devMode = false;
 var myJavaScript = "console.log('injected script successfully');setInterval(function(){gUsrIdle.clearIdle();console.log('cleared idle');}, 10000);";
 var scriptTag = document.createElement("script");
 scriptTag.innerHTML = myJavaScript;
@@ -7,10 +8,10 @@ document.head.appendChild(scriptTag);
 
 let url = location.href;
 let page = url.split("/scripts/wsisa.dll/WService=wsEAplus/")[1];
-console.log("[DEBUG] page = " + page);
+if(devMode) console.log("[DEBUG] page = " + page);
 
 chrome.storage.local.get(['skywardDarkTheme'], function(data){
-	console.log(data);
+	if(devMode) console.log(data);
 	if(data.skywardDarkTheme == true) {
 		let variablesCSS = document.createElement("link")
 		variablesCSS.rel = "STYLESHEET"
@@ -219,7 +220,7 @@ function calculateGPA() {
 				gpa_cnt++;
 			}
 			
-			console.log("final_grade: "+final_grade)
+			if(devMode) console.log("final_grade: "+final_grade)
 
 			tempGrades.push(final_grade)
 
@@ -256,7 +257,7 @@ function calculateGPA() {
 		}
     }
 
-	console.log(tempGrades)
+	if(devMode) console.log(tempGrades)
 	if(tempGrades.includes(-1)) { // it is the first semester or not all grades are in.	
 		tempGrades = tempGrades.filter(a=>a!==-1)
 	}
@@ -282,7 +283,7 @@ function calculateGPA() {
 		preGPAw = 0;
 	}
 	var gpaAverageW = preGPAsum / numberOfGrades1;
-	console.log("gpaAverageW: "+gpaAverageW);
+	if(devMode) console.log("gpaAverageW: "+gpaAverageW);
 	let preGPAu = 0;
 	preGPAsum = 0
 	for(let i=0; i < numberOfGrades; i++){
@@ -291,25 +292,25 @@ function calculateGPA() {
 		preGPAu = 0;
 	}
 	var gpaAverageU = preGPAsum / numberOfGrades;
-	console.log("gpaAverageU: "+gpaAverageU);
-	console.log("tempGrades: "+tempGrades);
+	if(devMode) console.log("gpaAverageU: "+gpaAverageU);
+	if(devMode) console.log("tempGrades: "+tempGrades);
 	//subtraction formula
 	console.log(gpa_sub + " " + gpa_cnt);
     let unweighted = 4.0 - gpa_sub / gpa_cnt;
     let weighted = weightaverage - gpa_sub / gpa_cnt;
-    console.log("weighted: "+weighted);
+    if(devMode) console.log("weighted: "+weighted);
     //use algorithm value to see which GPA value to use
 	var finalWeightedNumber;
 	var finalUnweightedNumber;
-	console.log("algNumber: "+algNumber)
+	if(devMode) console.log("algNumber: "+algNumber)
 	if(algNumber == 1){
 		finalWeightedNumber = weighted;
 		finalUnweightedNumber = unweighted;
-		console.log('algnumber is 1');
+		if(devMode) console.log('algnumber is 1');
 	}else{
 		finalWeightedNumber = gpaAverageW;
 		finalUnweightedNumber = gpaAverageU;
-		console.log('algnumber is 2');
+		if(devMode) console.log('algnumber is 2');
 	}
 	// Display GPA
 	let gpa_container = document.createElement("div");
@@ -335,14 +336,14 @@ function calculateGPA() {
         GPAstr += "Weighted GPA: " + (Math.round(finalWeightedNumber * 1000) / 1000).toString() + "</h2>"   
     }
     gpa_container.innerHTML = GPAstr;
-    console.log("detectNaN: "+detectNaN);
-    console.log(gpa_container.innerHTML);
+    if(devMode) console.log("detectNaN: "+detectNaN);
+    if(devMode) console.log(gpa_container.innerHTML);
     container.prepend(gpa_container);
 };
 
-function something(){
+function getStoredAlgorithm(){
 	chrome.storage.local.get(['storedAlgorithm'], function(data){
-		console.log(data);
+		if(devMode) console.log(data);
 		algNumber = data.storedAlgorithm;
 		let senseNaN = algNumber;
 		senseNaN = +senseNaN || 0;
@@ -351,12 +352,12 @@ function something(){
 		}
 	});
 }
-something();
+getStoredAlgorithm();
 
 var numberOfGradeDivs;
-function something2(){
+function getStoredGradesDivNum(){
 	chrome.storage.local.get(['storedGradesDivNum'], function(data){
-		console.log(data);
+		if(devMode) console.log(data);
 		numberOfGradeDivs = data.storedGradesDivNum;
 		let senseNaN = numberOfGradeDivs;
 		senseNaN = +senseNaN || 0;
@@ -366,7 +367,7 @@ function something2(){
 		console.log(numberOfGradeDivs)
 	});
 }
-something2();
+getStoredGradesDivNum();
 
 //get weights
 var numberOfWeights;
@@ -383,18 +384,18 @@ if(page == "sfgradebook001.w"){
 			weightsum += parseFloat(value1);
 			pushWeightArray = weightArray.push(parseFloat(value));
         }
-		console.log(weightArray);
+		if(devMode) console.log(weightArray);
 		weightArray = weightArray.filter(e => (e === 0 || e));
-		console.log(weightArray);
+		if(devMode) console.log(weightArray);
 		numberOfWeights = weightArray.length;
-		console.log(numberOfWeights);
-		console.log(weightsum);
+		if(devMode) console.log(numberOfWeights);
+		if(devMode) console.log(weightsum);
         if(data_len < 8){
             weightsum = NaN;
         }
-        console.log(weightsum);
+        if(devMode) console.log(weightsum);
         weightaverage = weightsum / numberOfWeights;
-        console.log(weightaverage);
+        if(devMode) console.log(weightaverage);
         
 		calculateGPA();
     });
@@ -405,7 +406,7 @@ function setNumberOfClasses() {
 	length = document.getElementsByClassName('cPd vAm bZe tOA gDt3R').length
 	length = length / 2 // 2 Semesters
 	length = length / 2 // 2 Elements per row (title and grades)
-	console.log("Number Of Classes: "+length)
+	if(devMode) console.log("Number Of Classes: "+length)
 	chrome.storage.local.set({numberOfClasses: length});
 }
 
