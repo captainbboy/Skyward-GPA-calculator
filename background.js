@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 function getClasses() {
 	var x = document.getElementById("weightselectordiv");
 	var GPAForms = document.getElementsByClassName("GPAForm");
@@ -244,52 +245,247 @@ function clearRads() {
 function clearWeightForms(){
 	let currentform = "";
 	clearRads();
+=======
+/**
+Copyright 2018-2020 MarioCMFlys
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+**/
+
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.browserAction.enable();
+  chrome.alarms.create("notifier", {periodInMinutes:1});
+  appendCourses();
+});
+
+var coursesAppended = false;
+
+function appendCourses(){
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      coursesAppended = true;
+      text = this.responseText.replace("while(1);","");
+      data = JSON.parse(text);
+      courses = [];
+      for(j=0;j<data.length;j++){
+        i = data[j];
+        c = {};
+        c.s = {};
+        c.s.content = "~#"+i.id;
+        c.s.description = "<url>" + i.name + "</url>";
+        c.url = "https://canvas.allenisd.org/courses/"+i.id;
+        courses.push(c);
+      }
+      suggestions.push.apply(suggestions, courses);
+    }
+  };
+  xhr.open("GET", "https://canvas.allenisd.org/api/v1/users/self/favorites/courses?include[]=term&exclude[]=en", true);
+  xhr.send();
 }
 
-function storeDivNumberGrades(){
-	let gradesDivNumberValue = document.forms.divnumberForm.gradeDivNumber.value;
-	console.log(gradesDivNumberValue);
-	chrome.storage.local.set({storedGradesDivNum: gradesDivNumberValue});
+chrome.alarms.onAlarm.addListener(function(alarm){
+  if(alarm.name == "notifier"){
+    //  https://canvas.allenisd.org/api/v1/conversations?scope=inbox&filter_mode=and&include_private_conversation_enrollments=false
+    chrome.storage.sync.get(null, function(storage){
+      if(storage["supressBGComms"] != true){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            text = this.responseText.replace("while(1);","");
+            data = JSON.parse(text);
+
+            if(storage["canvasNotify"] == true || storage["canvasNotify"] != false){
+
+              known = storage["latestMessage"];
+              newest = data[0].id;
+              if(known != newest){
+                unread = data.filter(function(e){
+                  return e.workflow_state == "unread";
+                });
+                if(unread.length == 1){
+                  opt = {
+                    type: 'basic',
+                    title: unread[0].subject,
+                    message: 'New message on Canvas',
+                    iconUrl: chrome.extension.getURL('./images/app-canvas.png'),
+                    eventTime: Date.now()
+                  }
+                  chrome.notifications.create("msg"+Date.now(), opt);
+                }
+                if(unread.length >= 2){
+                  opt = {
+                    type: 'list',
+                    title: unread.length+" new messages",
+                    iconUrl: chrome.extension.getURL('./images/app-canvas.png'),
+                    message: '',
+                    eventTime: Date.now(),
+                    items: []
+                  };
+                  for(j=0;j<unread.length;j++){
+                    i = unread[j];
+                    title = i.subject;
+                    l = {};
+                    l.title = title;
+                    l.message = "";
+                    opt.items.push(l);
+                  }
+                  chrome.notifications.create("msg"+Date.now(), opt);
+                }
+              }
+              f = {};
+              f["latestMessage"] = newest;
+              chrome.storage.sync.set(f, function(){});
+            }
+
+            if(!coursesAppended){
+              appendCourses();
+            }
+          }
+        };
+        xhr.open("GET", "https://canvas.allenisd.org/api/v1/conversations?scope=inbox&filter_mode=and&include_private_conversation_enrollments=false", true);
+        xhr.send();
+      }
+    });
+  }
+});
+
+chrome.notifications.onClicked.addListener(function(id){
+  if(id.startsWith("msg")){
+    chrome.notifications.clear(id);
+    chrome.tabs.create({url:"https://canvas.allenisd.org/conversations"});
+  }
+});
+
+var suggestions = [
+  {s: {content: "canvas", description: "Canvas"}, url: "https://canvas.allenisd.org/"},
+  {s: {content: "skyward", description: "Skyward Gradebook"}, url: "https://skyward.allenisd.org/"},
+  {s: {content: "portal", description: "Portal"}, url: "https://portal.allenisd.org/"},
+  {s: {content: "google", description: "Google Drive"}, url: "https://google.allenisd.org/"},
+  {s: {content: "montage", description: "Safari Montage <dim>(montage)</dim>"}, url: "https://montage.allenisd.org/"},
+  {s: {content: "citrix", description: "Citrix Storefront"}, url: "https://citrix.allenisd.org/vpn/index.html"},
+  {s: {content: "home", description: "AISD Front Page <dim>(home)</dim>"}, url: "https://www.allenisd.org/"},
+  {s: {content: "hs", description: "Allen HS <dim>(hs)</dim>"}, url: "https://www.allenisd.org/allenhs"},
+  {s: {content: "steam", description: "STEAM Center"}, url: "https://www.allenisd.org/Page/54990"},
+  {s: {content: "lowery", description: "Lowery FC"}, url: "https://www.allenisd.org/loweryhs"},
+  {s: {content: "curtis", description: "Curtis MS"}, url: "https://www.allenisd.org/curtisms"},
+  {s: {content: "ereckson", description: "Ereckson MS"}, url: "https://www.allenisd.org/erecksonms"},
+  {s: {content: "ford", description: "Ford MS"}, url: "https://www.allenisd.org/fordms"},
+  {s: {content: "erma", description: "ERMA"}, url: "https://erma.allenisd.org/"},
+  {s: {content: "test", description: "Test Skyward <dim>(test)</dim>"}, url: "https://testskyward.allenisd.org/"},
+  {s: {content: "ticket", description: "Helpdesk <dim>(ticket)</dim>"}, url: "https://helpdesk.allenisd.org/"},
+  {s: {content: "apg", description: "Academic Planning Guide <dim>(apg)</dim>"}, url: "https://canvas.allenisd.org/courses/858742"}
+];
+
+chrome.omnibox.onInputChanged.addListener(function(text, suggest) {
+  text = text.toLowerCase();
+
+  s = [];
+  for(i=0;i<suggestions.length;i++){
+    s.push(suggestions[i].s);
+  }
+  if(!coursesAppended){
+    s.push({content: "~E", description: "<dim>Login to Canvas to see personalized options</dim>"});
+  }
+
+  current = s.filter(function(e){
+    return (e.content.startsWith(text) || e.description.toLowerCase().includes(text));
+  });
+
+  if(current.length >= 1){
+     chrome.omnibox.setDefaultSuggestion({description: current[0].description});
+     current.shift();
+  }
+  suggest(current);
+});
+
+function open(loc){
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    var tab = tabs[0];
+    chrome.tabs.update(tab.id, {url: loc});
+  });
+}
+function openQuery(q){
+  open("https://www.google.com/search?q="+encodeURIComponent("aisd "+q));
+>>>>>>> Stashed changes
 }
 
-function storeDarkMode(){
-	let value = document.forms.divdarkmodeForm.darkModeRadio.value;
-	chrome.storage.local.get(['skywardDarkTheme'], function(data){
-		let darkTheme = data.skywardDarkTheme;
-		let newValue;
+chrome.omnibox.onInputEntered.addListener(function(text) {
+  text = text.toLowerCase();
 
-		if(value == 1 && darkTheme != true) {
-			newValue = true;
-		}
-		else if(value == 2 && darkTheme != false) {
-			newValue = false;
-		}
+  current = suggestions.filter(function(e){
+    return (e.s.content.startsWith(text) || e.s.description.toLowerCase().includes(text));
+  });
 
-		if(newValue != undefined) {
-			chrome.tabs.query({url: "https://*/scripts/wsisa.dll/WService=wsEAplus/*"}, function(tab) {
-				tab.forEach((t) => {
-					if(t.url.toString().includes('seplog01.w')) {
-						chrome.tabs.reload(t.id);
-					} else {
-						// chrome.tabs.executeScript(t.id, {code: `
-						// 	children = document.getElementById("sf_navMenu").children;
-						// 	for(let c = 0; c < children.length; c++) {
-						// 		let datan = children[c].firstChild.getAttribute('data-nav');
-						// 		// console.log(datan)
-						// 		let url = '${t.url.split("/scripts/wsisa.dll/WService=wsEAplus/")[1]}';
-						// 		// console.log(url)
-						// 		if(datan && datan == url) {
-						// 			children[c].click();
-						// 			console.log('clicked!')
-						// 			console.log(children[c])
-						// 		}
-						// 	}
-						// `})
-					}
-				})
-			})
-			chrome.storage.local.set({skywardDarkTheme: newValue});
-		}
-		
-	});
+  if(current.length >= 1){
+    req = current[0];
+    open(req.url);
+  }
+  else{
+    openQuery(text);
+  }
+});
+
+function courseMenu(i, t, page){
+  r = /.*\/courses\/([0-9]*).*/g;
+  c = r.exec(i.linkUrl)[1];
+  chrome.tabs.update(null, {url: "https://canvas.allenisd.org/courses/"+c+page}, null);
 }
+
+chrome.contextMenus.create({
+  id: "as-course",
+  title: "Course Pages",
+  contexts: ["link"],
+  visible: true,
+  targetUrlPatterns: ["*://canvas.allenisd.org/courses/*"]
+});
+
+chrome.contextMenus.create({
+  title: "Home",
+  contexts: ["link"],
+  visible: true,
+  parentId: "as-course",
+  onclick: function(i, t){
+    courseMenu(i, t, "/");
+  }
+});
+
+chrome.contextMenus.create({
+  title: "Modules",
+  contexts: ["link"],
+  visible: true,
+  parentId: "as-course",
+  onclick: function(i, t){
+    courseMenu(i, t, "/modules");
+  }
+});
+
+chrome.contextMenus.create({
+  title: "Announcements",
+  contexts: ["link"],
+  visible: true,
+  parentId: "as-course",
+  onclick: function(i, t){
+    courseMenu(i, t, "/announcements");
+  }
+});
+
+chrome.contextMenus.create({
+  title: "People",
+  contexts: ["link"],
+  visible: true,
+  parentId: "as-course",
+  onclick: function(i, t){
+    courseMenu(i, t, "/users");
+  }
+});

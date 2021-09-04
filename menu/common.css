@@ -1,0 +1,98 @@
+/**
+Copyright 2018-2020 MarioCMFlys
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+**/
+
+html,body{
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  -moz-user-select: none;
+}
+.header{
+  width: 100%;
+  margin: 0px;
+  padding: 5px;
+  background-color: #0F1E59;
+}
+img.header-logo{
+  height: 44px;
+  margin: 3px;
+}
+.header h3, .header small{
+  color: #EEEEEE;
+  margin-bottom: 5px;
+}
+div.bottom{
+  background-color: #FAFAFA;
+  width: 100%;
+  padding: 10px;
+}
+div.bottom a{
+  color: #000000;
+  text-decoration: none;
+  font-size: 10pt;
+  opacity: 0.3;
+}
+div.bottom a:hover{
+  opacity: 0.4;
+}
+div.warning{
+  background-color: #FFDDDD;
+  padding: 5px;
+}
+
+input.field {
+  background: #FFFFFF;
+  padding: 7px;
+  border: 1px solid #DDD;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+button.btn {
+  background: #222;
+  color: #FFFFFF;
+  padding: 10px;
+  border: 0;
+  font-size: 12;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+button.btn:hover {
+  background: #444;
+}
+
+button.btn.btnPrimary {
+  background: #248;
+}
+button.btn.btnPrimary:hover {
+  background: #2C58AF;
+}
+
+button.btn.btn-danger {
+  background: #A22;
+}
+button.btn.btn-danger:hover {
+  background: #C44;
+}
+
+.page-title {
+  margin-top: 20px;
+}
+
+a {
+  color: #22A;
+}
+

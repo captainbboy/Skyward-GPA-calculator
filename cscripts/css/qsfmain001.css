@@ -154,7 +154,7 @@ a.button[disabled]{
     margin:0 4px;
     text-decoration:none !important;
     width:15px;
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -159px -33px transparent
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -159px -33px transparent
 }
 .sf_alert{
     display:inline-block;
@@ -163,7 +163,7 @@ a.button[disabled]{
     margin:0 4px;
     text-decoration:none !important;
     width:19px;
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -64px -31px transparent
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -64px -31px transparent
 }
 .sf_globe{
     display:inline-block;
@@ -171,10 +171,10 @@ a.button[disabled]{
     line-height:15px;
     text-decoration:none !important;
     width:15px;
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -139px -34px transparent
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -139px -34px transparent
 }
 .sf_icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -33px -33px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -33px -33px transparent;
     height:18px;
     width:18px
 }
@@ -320,7 +320,7 @@ a.button div.sf_iconAttch{
     width:17px
 }
 a.button div.sf_iconAttch div.sf_icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 -61px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 -61px transparent;
     height:15px;
     position:absolute;
     top:-1px;
@@ -407,7 +407,7 @@ label.sf_labelRight{
     left:0
 }
 #sf_BrandingArea div.sf_skywardLogo{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 -101px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 -101px transparent;
     height:55px;
     left:15px;
     position:absolute;
@@ -420,7 +420,7 @@ label.sf_labelRight{
     top:12px
 }
 #sf_EntityArea div.sf_titleArea{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 -159px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 -159px transparent;
     height:20px;
     left:0;
     top:0;
@@ -551,7 +551,7 @@ label.sf_labelRight{
     font-size:19px
 }
 #sf_StudentSelect{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -158px -51px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -158px -51px transparent;
     cursor:pointer;
     position:absolute;
     height:16px;
@@ -645,7 +645,7 @@ label.sf_labelRight{
     display:none
 }
 #sf_ExternalContent #districtLinksMenu.both .districtIcon,#sf_ExternalContent #districtLinksMenu.icon .districtIcon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -150px -173px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -150px -173px transparent;
     height:24px;
     width:24px;
     display:inline-block;
@@ -981,7 +981,7 @@ div.hasCloser{
     padding-right:25px
 }
 .tipCloser{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -106px -63px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -106px -63px transparent;
     color:transparent;
     cursor:pointer;
     display:inline-block;
@@ -1553,7 +1553,7 @@ div.sfLinks{
     text-transform:uppercase
 }
 .sf_timeTrigger{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -80px -79px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -80px -79px transparent;
     color:transparent;
     display:inline-block;
     height:18px;
@@ -1705,7 +1705,7 @@ div.sfLinks{
     overflow:auto
 }
 .sf_DialogClose{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -33px -59px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -33px -59px transparent;
     height:17px;
     position:absolute;
     right:4px;
@@ -1715,7 +1715,7 @@ div.sfLinks{
     text-decoration:none !important
 }
 .sf_DialogPrint{
-    background:url("../sprite/printer1.png") no-repeat scroll 0 0 transparent;
+    background:url("../images/printer1.png") no-repeat scroll 0 0 transparent;
     height:18px;
     position:absolute;
     right:4px;
@@ -1786,10 +1786,10 @@ div.sfLinks{
     padding-left:6px
 }
 .sf_dialog .sf_DialogClose{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -102px -59px transparent
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -102px -59px transparent
 }
 .sf_dialog .sf_DialogClose:hover,.sf_dialog .sf_DialogClose:focus{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -117px -59px transparent
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -117px -59px transparent
 }
 .sf_DialogModal{
     z-index:10000
@@ -2186,7 +2186,7 @@ span.sf_requiredIcon{
     width:150px
 }
 #calnext,#calprev{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -88px -30px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -88px -30px transparent;
     cursor:pointer;
     display:block;
     float:left;
@@ -2195,7 +2195,7 @@ span.sf_requiredIcon{
     width:20px
 }
 #calnext{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -115px -30px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -115px -30px transparent;
     float:right
 }
 #calprev.caldisabled,#calnext.caldisabled{
@@ -2319,7 +2319,7 @@ a.caloff{
     top:0 !important
 }
 .caltrigger{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -80px -58px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -80px -58px transparent;
     color:transparent;
     display:inline-block;
     height:19px;
@@ -2438,7 +2438,7 @@ div[grid-theme] div.fixedWrap div.fixedRows>table>tbody>tr>td:last-child{
     float:right
 }
 .gridPaging>a{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 0 transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 0 transparent;
     height:15px;
     width:18px;
     margin:0 2px;
@@ -2634,21 +2634,21 @@ a.groupLink{
     text-decoration:none
 }
 .sf_open-book{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -130px -73px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -130px -73px transparent;
     display:inline-block;
     height:26px;
     width:26px;
     margin:0 3px
 }
 .sf_paperclip{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -33px -80px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -33px -80px transparent;
     display:inline-block;
     height:17px;
     width:18px;
     margin:0 3px
 }
 .sf_printer{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 -80px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 -80px transparent;
     display:inline-block;
     height:17px;
     line-height:17px;
@@ -2656,7 +2656,7 @@ a.groupLink{
     margin:0 3px
 }
 .sf_balloon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -58px -84px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -58px -84px transparent;
     display:inline-block;
     height:12px;
     line-height:12px;
@@ -2664,7 +2664,7 @@ a.groupLink{
     margin:0 3px
 }
 .sf_priority{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -64px -31px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -64px -31px transparent;
     display:inline-block;
     height:20px;
     line-height:20px;
@@ -2672,7 +2672,7 @@ a.groupLink{
     margin:0 3px
 }
 .sf_chart{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -95px -137px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -95px -137px transparent;
     display:inline-block;
     height:15px;
     line-height:15px;
@@ -2680,7 +2680,7 @@ a.groupLink{
     margin:0 3px
 }
 .sf_form{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -18px -61px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -18px -61px transparent;
     display:inline-block;
     height:15px;
     line-height:15px;
@@ -2688,7 +2688,7 @@ a.groupLink{
     margin:0 4px
 }
 .sf_meeting{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -94px -119px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -94px -119px transparent;
     display:inline-block;
     height:15px;
     line-height:15px;
@@ -2696,21 +2696,21 @@ a.groupLink{
     margin:0 3px
 }
 .sf_twitter{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -151px -145px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -151px -145px transparent;
     display:inline-block;
     height:24px;
     line-height:24px;
     width:24px
 }
 .sf_facebook{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -151px -118px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -151px -118px transparent;
     display:inline-block;
     height:24px;
     line-height:24px;
     width:24px
 }
 .sf_green-check{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -142px -101px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -142px -101px transparent;
     height:15px;
     width:15px;
     margin:0 3px
@@ -2743,7 +2743,7 @@ a.groupLink{
     width:13px;
     display:inline-block;
     margin:0 4px;
-    background:url("../sprite/arrows_sprite.png") no-repeat scroll 2px -29px transparent;
+    background:url("../images/arrows_sprite.png") no-repeat scroll 2px -29px transparent;
     vertical-align:sub
 }
 .sf_expandIcon.sf_expanded{

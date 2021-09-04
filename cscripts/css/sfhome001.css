@@ -66,7 +66,7 @@ body {
     position:relative
 }
 #Calendar li.calendarTitle div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 0 transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 0 transparent;
     height:16px;
     left:3px;
     position:absolute;
@@ -205,7 +205,7 @@ body {
     right:21px;
     z-index:1;
     width:15px;
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -125px -99px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -125px -99px transparent;
     border-left:1px solid var(--darker-bg-color);
     border-bottom:1px solid var(--darker-bg-color);
     padding-right:2px
@@ -314,7 +314,7 @@ body {
     z-index:1
 }
 #MessagePost div.messageHead div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll 0 -29px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll 0 -29px transparent;
     height:17px;
     left:6px;
     position:absolute;
@@ -429,7 +429,7 @@ body {
     border-bottom:1px solid #aabaa0
 }
 .home_MessageFeed div.message_grades div.messageHead div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -28px 2px #87a676;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -28px 2px #87a676;
     border-left:1px solid #809673
 }
 .home_MessageFeed div.message_other div.messageHead{
@@ -444,7 +444,7 @@ body {
     border-bottom:1px solid #dac899
 }
 .home_MessageFeed div.message_other div.messageHead div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -147px 3px #dcb95f;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -147px 3px #dcb95f;
     border-left:1px solid #c1ae7c
 }
 .home_MessageFeed div.message_general div.messageHead,.home_MessageFeed div.message_warning_blue div.messageHead{
@@ -459,7 +459,7 @@ body {
     border-bottom:1px solid var(--darker-bg-color)
 }
 .home_MessageFeed div.message_general div.messageHead div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -106px 3px #7395b2;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -106px 3px #7395b2;
     border-left:1px solid #7b91a5
 }
 .home_MessageFeed div.message_class div.messageHead{
@@ -474,7 +474,7 @@ body {
     border-bottom:1px solid #daa684
 }
 .home_MessageFeed div.message_class div.messageHead div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -65px 1px #f18e4c;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -65px 1px #f18e4c;
     border-left:1px solid #da8045
 }
 .home_MessageFeed li div.stuName{
@@ -593,7 +593,7 @@ div.autoListWrap{
     text-decoration:none !important
 }
 #MessagePost ul.autoList li div.icon{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -33px -33px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -33px -33px transparent;
     height:18px;
     left:5px;
     position:absolute;
@@ -652,7 +652,7 @@ div.autoListWrap{
     margin-top:2px
 }
 .To a,.Stu a{
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -63px -61px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -63px -61px transparent;
     height:10px;
     position:absolute;
     right:2px;
@@ -820,7 +820,7 @@ div.msgDetail{
     line-height:20px;
     padding:0 10px;
     vertical-align:middle;
-    background:url("../sprite/sf_bg_sprite001.png") no-repeat scroll right -25px transparent
+    background:url("../images/sf_bg_sprite001.png") no-repeat scroll right -25px transparent
 }
 #home_menuTable>li.last{
     background:none repeat scroll 0 0 transparent;
@@ -833,7 +833,7 @@ div.msgDetail{
     display:inline-block;
     height:19px;
     width:29px;
-    background:url("../sprite/sf_icons_sprite.png") no-repeat scroll -97px -98px transparent;
+    background:url("../images/sf_icons_sprite.png") no-repeat scroll -97px -98px transparent;
     text-decoration:none !important
 }
 #toggleHidden{

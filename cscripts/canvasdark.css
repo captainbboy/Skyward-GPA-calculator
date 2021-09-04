@@ -1,0 +1,825 @@
+/**
+Copyright 2018-2020 MarioCMFlys
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+**/
+
+:root{
+  --ic-link-color: #97C3D3 !important;
+  --ic-link-color-darkened-10: #5AA0BA !important;
+  --ic-brand-primary: #207FDF !important;
+  --ic-brand-global-nav-ic-icon-svg-fill--active: #2793FF !important;
+}
+
+body{
+  background-color: #2C2F33 !important;
+}
+header.ic-app-header{
+  background-color: #23272A !important;
+}
+div.ic-app-header__logomark-container{
+  background-color: inherit;
+}
+div#nav-tray-portal > span > span{
+  background-color: #23272A !important;
+}
+div.tray-with-space-for-global-nav > div h2{
+  color: #DDDDDD;
+}
+div.tray-with-space-for-global-nav > div hr{
+  border-color: #394146 !important;
+}
+div.tray-with-space-for-global-nav > div a{
+  color: var(--ic-link-color) !important;
+}
+div.tray-with-space-for-global-nav > div a:hover{
+  color: var(--ic-link-color-darkened-10);
+}
+div.tray-with-space-for-global-nav > div > ul > li > div{
+  color: #AAAAAA;
+}
+div.tray-with-space-for-global-nav > div span{
+  color: #BBBBBB;
+}
+div.tray-with-space-for-global-nav > div > div{
+  color: #BBBBBB;
+}
+
+div.ic-notification .ic-notification__content{
+  background-color: #2C2F33 !important;
+}
+
+.standalone-icon:before {
+  color: #DDD !important;
+}
+
+button {
+  color: #DDD;
+}
+
+/** Make images have white background when hovered **/
+img:hover {
+  background-color: #FFF !important;
+}
+
+/** Dashboard with card layout **/
+div.ic-Dashboard-header__layout{
+  color: #DDDDDD;
+  background-color: #2C2F33F2;
+  border-bottom: 1px solid #394146;
+}
+div#DashboardOptionsMenu_Container button{
+  color: #DDD;
+}
+div.ic-DashboardCard__header_content{
+  background-color: inherit !important;
+}
+div.ic-DashboardCard{
+  background-color: #23272A;
+}
+div.ic-DashboardCard a{
+  /*color: #207FDF;*/
+}
+.ic-DashboardCard__action {
+  color: #AAA !important;
+}
+
+/* Some list thing, possibly "Coming Up" or "Recent Feedback" on dashboard, too tired to find out */
+aside#right-side h2{
+  color: #DDDDDD;
+  border-bottom: 1px solid #394146;
+}
+#right-side .right-side-list li em,
+ #right-side .right-side-list li p{
+  color: #808080 !important;
+}
+ul.right-side-list i{
+  color: #808080 !important;
+}
+ul.right-side-list li{
+  color: #808080 !important;
+}
+li.todo button.disable-todo-item-link i.icon-x{
+  color: #757575;
+}
+div.todo-details::after,
+div.event-details::after{
+  display: none;
+}
+a.icon-calendar-day::before{
+  color: #656565;
+}
+
+#right-side .h2{
+  border-bottom: 1px solid #394146 !important;
+}
+
+
+/* Todo list on card dashboard */
+div.Sidebar__TodoListContainer > div > ul > li{
+  color: #808080 !important;
+}
+div.Sidebar__TodoListContainer > div > ul > li a{
+  color: var(--ic-link-color) !important;
+}
+div.Sidebar__TodoListContainer > div > ul > li ul li span{
+  color: #808080 !important;
+}
+div.Sidebar__TodoListContainer > div > ul > li svg{
+  color: #808080 !important;
+}
+div.Sidebar__TodoListContainer > div > div > button{
+  color: var(--ic-link-color) !important;
+}
+div.ToDoSidebarItem__Info > span,
+div.ToDoSidebarItem__Info li {
+  color: #AAA !important;
+}
+
+/** Dashboard with list layout **/
+.planner-day{
+  background-color: #2C2F33 !important;
+}
+
+
+/* Dashboard footer */
+footer.ic-app-footer div#footer-links a{
+  color: #808080 !important;
+}
+
+.paginatedLoadingIndicator{
+  /*background-image: url("https://canvas.allenisd.org/dist/images/ajax-reload-animated-8255e06a8a.gif"); INSERT A NEW BG IMAGE HERE */
+}
+
+
+div.ic-app-nav-toggle-and-crumbs{
+  border-bottom: 1px solid #394146 !important;
+}
+nav#breadcrumbs{
+  background-color: inherit;
+  color: #DDD;
+}
+nav#breadcrumbs a{
+  color: var(--ic-link-color) !important;
+}
+nav#breadcrumbs a:hover{
+  color: var(--ic-link-color-darkened-10) !important;
+}
+span#section-tabs-header-subtitle{
+  color: #808080 !important;
+}
+div.ic-app-course-menu li.section a{
+  color: #AAA !important;
+}
+div.ic-app-course-menu li.section a:hover{
+  color: #CCC !important;
+}
+div.ic-app-course-menu li.section a.active{
+  color: #FFF !important;
+  border-left-color: var(--ic-brand-primary) !important;
+}
+
+
+div.ic-Layout-contentMain{
+  color: #DDD;
+}
+div.ic-Layout-contentMain h1,
+div.ic-Layout-contentMain h2{
+  color: #FFF;
+}
+
+/* /grades page for class grades */
+table.student_grades td{
+  border-bottom-color: #394146;
+}
+
+ul li.ic-flash-success{
+  background-color: #23272A;
+  color: #DDD;
+  border-color: #1BB127;
+}
+ul li.ic-flash-success div.ic-flash__icon{
+  background-color: #1BB127 !important;
+}
+
+div#wiki_page_show{
+  color: #DDDDDD !important;
+}
+div#wiki_page_show div.header-bar{
+  background-color: inherit !important;
+  border-bottom: 1px solid #394146 !important;
+}
+div#wiki_page_show div.header-bar h2{
+  color: #FFF !important;
+}
+.pages.show h1.page-title{
+  color: #FFF !important;
+}
+
+div#assignment_show{
+  color: #DDD !important;
+}
+div#assignment_show div.title-content h1.title{
+  color: #FFF !important;
+}
+div#assignment_show ul.student-assignment-overview,
+div#quiz_show ul#quiz_student_details{
+  color: #AAA !important;
+  border-top-color: #394146 !important;
+  border-bottom-color: #394146 !important;
+}
+div#assignment_show div.description hr{
+  border-color: #394146 !important;
+}
+div.module-sequence-footer-content{
+  background: inherit !important;
+  border-top-color: #394146 !important;
+}
+div.rubric div.rubric_title{
+  background-color: inherit;
+}
+div.rubric table.rubric_table th{
+  background-color: inherit;
+}
+aside#right-side{
+  color: #DDD;
+}
+aside#right-side div.details div.header{
+  color: #BBB;
+}
+aside#right-side div.details div.module a i.icon-rubric{
+  color: #999;
+}
+div.ig-row.student-view{
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+
+aside#right-side table.summary th,
+aside#right-side table.summary td{
+  background-color: inherit;
+  border-bottom-color: #394146;
+}
+
+ul#question_list li i{
+  color: #AAA !important;
+}
+div#quiz-submission-version-table table.ic-Table td,
+div#quiz-submission-version-table table.ic-Table th{
+  border-bottom-color: #394146;
+}
+div.quiz_score span.score_value{
+  color: #FFF;
+}
+div.quiz-submission{
+  background-color: inherit;
+  border: none;
+}
+header.quiz-header{
+  border-bottom-color: #394146;
+}
+
+div.display_question{
+  background-color: inherit;
+  border-color: #394146;
+}
+div.display_question div.header{
+  background-color: #394146 !important;
+  border-bottom: 0px;
+}
+div.display_question div.answer{
+  border-top-color: #394146 !important;
+}
+div.display_question span.question_points_holder{
+  color: #888 !important;
+}
+
+form#submit_quiz_form div#questions{
+  background-color: inherit;
+}
+
+div.ic-Layout-contentMain div.header-bar{
+  background-color: inherit;
+  color: #FFF;
+  border-bottom-color: #394146;
+}
+div.ic-Layout-contentMain div.item-group-container{
+  background-color: #3B3F44;
+  border-color: #474C52;
+}
+div.ic-Layout-contentMain div.item-group-container div.ig-header.header,
+div.ic-Layout-contentMain div.item-group-container div.ig-header.header span.name{
+  color: #EEE;
+  text-shadow: none;
+}
+.item-group-condensed div.ig-header {
+  background-color: #34383C !important;
+  border-color: #474C52 !important;
+  color: #EEE !important;
+}
+
+div.ic-Layout-contentMain div.item-group-container div.content div.ig-row{
+  background-color: #40444A;
+  border-color: #474C52;
+  color: #DDD;
+}
+div.ic-Layout-contentMain div.item-group-container div.content div.ig-row a{
+  color: #DDD !important;
+}
+div.ic-Layout-contentMain div.item-group-container div.item-group-condensed{
+  border-bottom-color: #5F656D;
+}
+.context_module i.icon-minimize{
+  color: #FD3300;
+}
+div.requirements_message .pill{
+  box-shadow: none;
+  border-color: #EEE;
+}
+.context_module .icon-check{
+  color: #1BB127 !important;
+}
+div.module-item-status-icon i.icon-check{
+  color: #1BB127 !important;
+}
+div.roster-tab.tab-panel.ui-tabs-panel.form-inline{
+   background-color: #3B3F44;
+
+}
+table.ic-Table--striped td{
+   background-color: #3B3F44;
+   color: #DDD;
+}
+table.ic-Table--striped th{
+   color: #DDD;
+}
+a.ui-tabs-anchor{
+	background-color: #3B3F44;
+	color: #DDD !important;
+}
+li.static.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active{
+	border-color: #394146 !important;
+	background-color: #3B3F44;
+  color: #DDD !important;
+}
+ul.collectionViewItems.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all{
+    border-bottom-color: #394146 !important;
+}
+li.ui-state-default.ui-corner-top,
+li.ui-state-default.ui-corner-top:hover{
+  border-color: #394146 !important;
+	background-color: #444;
+  color: #DDD;
+}
+table.roster th, table.roster td{
+  border-bottom-color: #5F656D;
+}
+
+.course-list-favorite-course{
+  color: #FF7F0B !important;
+}
+tr.course-list-table-row:hover{
+  background-color: #444 !important;
+
+}
+table.ic-Table.ic-Table--bordered.course-list-table td,
+table.ic-Table.ic-Table--bordered.course-list-table th{
+  border-top-color: #394146 !important;
+  border-bottom-color: #394146 !important;
+}
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link{
+  background-color: #444 !important;
+}
+li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active,
+li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active:hover{
+  background-color: #444 !important;
+  color: #DDD !important;
+  border-color: #394146 !important;
+}
+div.roster-tab.tab-panel{
+  background-color: #444;
+  border-top: 50px solid #444;
+}
+div.student-group-header.clearfix{
+  background-color: #444 !important;
+  color: #DDD !important;
+}
+ul.collectionViewItems.ui-tabs-nav ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all,
+ul.collectionViewItems.ui-tabs-nav ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all:hover{
+  color: #DDD !important;
+}
+div.student-group-body{
+  color: #DDD !important;
+}
+span.student-group-students{
+  color: #DDD !important;
+}
+div.student-group-title{
+  color: #DDD !important;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #DDD !important;
+}
+a[tabindex=-1]{
+  color: #DDD !important;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a{
+  color: #DDD !important;
+}
+.ui-tabs .ui-tabs-nav li a{
+  color: #DDD !important;
+}
+div.content.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{
+	color: #444 !important;
+}
+form.submit_assignment_form.ui-tabs-panel.ui-widget-content.ui-corner-bottom{
+	background-color: #444 !important;
+	color: #DDD;
+	border-color: #394146;
+}
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all{
+	border-bottom-color: #394146 !important;
+}
+header.panel{
+	background-color: #2C2F33 !important;
+	color: #DDD !important;
+	border-bottom-color: #394146 !important;
+}
+footer.ic-app-footer{
+  border-top-color: #394146 !important;
+}
+footer.ic-app-footer a{
+  color: #394146 !important;
+}
+
+/* Mail / messages */
+ul.messages.unstyled.collectionViewItems{
+	background-color: #2C2F33 !important;
+	color: #DDD !important;
+}
+.message-list .messages>li{
+	background-color: #2C2F33 !important;
+	color: #DDD !important;
+	border-bottom-color: #394146 !important;
+}
+.message-list-scroller{
+  border-right-color: #394146 !important;
+}
+div.message-header, li.message-item-view{
+  border-color: #394146 !important;
+}
+
+h3.subject,
+h2.author,
+div.summary{
+	color: #DDD !important;
+}
+form[action="/logout"] button{
+	background-color: #171A1C !important;
+	color: #DDD !important;
+  border: 0 !important;
+}
+
+.message-list .message-count{
+  background-color: #4A5257 !important;
+}
+
+
+#unauthorized_message{
+  /*border-color: #394146 !important;*/
+  border-color: #C43C35 !important;
+}
+#unauthorized_message .ui-state-error{
+  /*background-color: #C43C35 !important;*/
+  background-image: none;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+thead{
+  background-color: transparent !important;
+}
+thead th{
+  background-color: transparent !important;
+}
+span._1clzBoF{
+  color: #DDD;
+}
+table.notification-prefs-table,table.notification-prefs-table td, table.notification-prefs-table th{
+  border-color: #394146 !important;
+}
+
+td.comm-event-option i {
+  color: #FFF !important;
+}
+
+.profile_table .data_description{
+  color: #AAA !important;
+}
+ul#registered_services li.service:hover{
+  background-color: #23272A !important;
+}
+table#access_tokens *{
+  background-color: inherit !important;
+}
+ul.feature-flags.collectionViewItems{
+  color: #DDD !important;
+}
+ul.feature-flags span.element_toggler i{
+  color: #DDD !important;
+}
+table tbody tr th p.email_channel.contact_channel_path{
+  color: #DDD !important;
+}
+table.email_channels th, table.email_channels td{
+  border-bottom-color: #394146 !important;
+}
+div#pairing-code button{
+  background-color: #23272A !important;
+  border-color: #1E2224;
+  color: #DDD;
+}
+
+table#access_tokens, table#access_tokens th, table#access_tokens td{
+  border-color: #394146 !important;
+}
+
+ul.feature-flags, ul.feature-flags li{
+  border-color: #394146 !important;
+}
+
+/* Generic alert boxes */
+div.alert.alert-info{
+  background-color: var(--ic-brand-primary) !important;
+  border: 1px solid #0770A3 !important;
+}
+div.alert.alert-success{
+  background-color: #127A1B !important;
+  border: 1px solid #127A1B !important;
+}
+div.alert, div.alert.alert-warning{
+  background-color: #C8562D;
+  color: #FFF;
+  border: 1px solid #C8562D;
+}
+div.alert.alert-danger{
+  background-color: #BF4949 !important;
+  border: 1px solid #9C3131 !important;
+}
+
+/* Generic IC table & horizontal divider */
+.ic-Table th, .ic-Table td{
+  border-bottom-color: #394146 !important;
+}
+hr{
+  border-color: #394146 !important;
+}
+
+/* Generic buttons */
+.btn, .Button, .ui-button{
+  color: #DDDDDD !important;
+}
+.btn, .Button:not(.ic-DashboardCard__header-button):not(.disable_item_link):not(.ic-app-course-nav-toggle), .ui-button{
+  background-color: #23272A !important;
+  border-color: #1E2224 !important;
+}
+.btn.btn-primary{
+  background: var(--ic-brand-primary) !important;
+}
+.btn.btn-success{
+  background: #127A1B !important;
+}
+.btn.btn-warning{
+  background: #C8562D !important;
+}
+.btn.btn-danger{
+  background: #BF4949 !important;
+}
+
+/* Generic text inputs */
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"], 
+.uneditable-input {
+  background: #23272A !important;
+  border: #1E2224 !important;
+  color: #FFFFFF !important;
+}
+
+div.caret {
+  border-top-color: #FFF !important;
+}
+
+/* Generic Scrollbars */
+*::-webkit-scrollbar {
+  background-color: #282b2e;
+  width: 10px;
+}
+*::-webkit-scrollbar-button{
+  background-color: #282b2e;
+  color: #AAA;
+}
+*::-webkit-scrollbar-button:hover{
+  background-color: #394146;
+  color: #FFF;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #394146;
+}
+*::-webkit-scrollbar-thumb:hover{
+  background-color: #4A5257;
+}
+
+
+div.toolbarView, div.toolbarView div.headerBar{
+  background-color: inherit !important;
+  border-color: #394146 !important;
+}
+div#discussion_container div.entry-content{
+  border-left-color: #394146 !important;
+  border-right-color: #394146 !important;
+}
+div#discussion_container article#discussion_topic div.alert-info span.discussion-points{
+  color: #FFFA !important;
+}
+div#discussion_container article#discussion_topic div.alert-info div.discussion-pubdate{
+  color: #FFFA !important;
+}
+li.entry, li.entry article.discussion_entry{
+  background: transparent !important;
+  border-color: #394146 !important;
+}
+li.entry, li.entry article.discussion_entry div.discussion-pubdate time span{
+  color: #AAA !important;
+}
+li.entry, li.entry article.discussion_entry div.discussion-section{
+  color: #DDD !important;
+}
+.discussion-reply-action, .discussion-rate-action {
+  color: #AAA !important;
+}
+.read .discussion-read-state {
+  background: #23272A !important;
+  border-color: #394146 !important;
+}
+
+/* Discussions list */
+div.pinned-discussions-v2__wrapper,
+div.unpinned-discussions-v2__wrapper,
+div.closed-for-comments-discussions-v2__wrapper {
+  background-color: #3B3F44 !important;
+  border-color: #474C52 !important;
+}
+
+div.pinned-discussions-v2__wrapper span,
+div.unpinned-discussions-v2__wrapper span,
+div.closed-for-comments-discussions-v2__wrapper span {
+  color: #DDD;
+}
+.ic-discussion-row {
+  background-color: #3B3F44 !important;
+  box-shadow: none !important;
+  border: 1px solid #474C52 !important;
+}
+.ic-discussion-row span {
+  color: #DDD !important;
+}
+
+.discussions-v2__container-image {
+  background-color: #3B3F44 !important;
+  border-color: #474C52 !important;
+}
+
+.ic-unread-badge__total-count {
+  background: #3E4D60 !important;
+}
+
+/* Canvas Calendar */
+table tbody.fc-body{
+  background-color: transparent !important;
+}
+table tbody.fc-body td, .fc-widget-header{
+  border-color: #394146 !important;
+}
+.fc-widget-header{
+  color: #DDD !important;
+}
+div#minical.fc{
+  background-color: transparent !important;
+}
+div#minical.fc .fc-toolbar{
+  color: #DDD !important;
+}
+#calendar-app .fc-month-view .fc-today, #calendar-drag-and-drop-container .fc-month-view .fc-today{
+  background-color: transparent !important;
+}
+div#context-list-holder, #undated-events{
+  background-color: transparent !important;
+}
+#context-list .context_list_context:hover{
+  background-color: transparent !important;
+}
+div#context-list-holder, #undated-events button{
+  background-color: transparent !important;
+}
+#calendar-app .fc-event, #calendar-drag-and-drop-container .fc-event {
+  background-color: inherit !important;
+}
+div#minical.fc.fc-ltr.fc-unthemed{
+  display: none;
+}
+a#create_new_event_link{
+  color: #DDDDDD !important;
+}
+
+div.ig-row{
+  background-color: #3B3F44 !important;
+  color: #DDD !important;
+}
+
+a.ig-title{
+  color: #97C3D3 !important;
+}
+
+a.element_toggler.accessible-toggler{
+  color: #97C3D3 !important;
+}
+
+
+
+/* Course grade page */
+#grades_summary td.details a {
+  color: #DDD !important;
+}
+
+span.submission-missing-pill > span,
+span.submission-late-pill > span {
+  background: inherit !important;
+}
+
+/* Dialog popup */
+.ui-dialog .ui-dialog-titlebar.ui-widget-header,
+.ui-dialog .ui-datepicker .ui-widget-header.ui-datepicker-header,
+.ui-datepicker .ui-dialog .ui-widget-header.ui-datepicker-header {
+  background: #2C2F33 !important;
+  border-bottom-color: #394146 !important;
+}
+.ui-widget-content {
+  background: #2C2F33 !important;
+  color: #DDD !important;
+  border-left-color: #394146 !important;
+  border-top-color: #394146 !important;
+  border-bottom-color: #394146 !important;
+  border-right-color: #394146 !important;
+}
+
+/* Autocomplete text field */
+.ac-input-box {
+  background: #23272A !important;
+  border: none !important;
+}
+.ac-token {
+  background: #2A3F4E !important;
+}
+.ac-result-container {
+  background: #23272A !important;
+  border-color: #394146 !important;
+}
+.ac-result-wrapper:before {
+  border-bottom-color: #394146 !important;
+}
+.ac-result-wrapper:after {
+  border-bottom-color: #23272A !important;
+}
+
+/* Context menu */
+.ui-menu .ui-menu-item a {
+  color: #DDD !important;
+}
+
