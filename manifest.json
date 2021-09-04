@@ -1,5 +1,4 @@
 {
-<<<<<<< Updated upstream
     "name": "Skyward GPA Calculator - And More",
     "description": "This is an extension which injects various scripts into Skyward, to calculate GPA and perform other tasks, such as disabling the idle logout prompt.",
     "version": "0.3",
@@ -119,5 +118,4 @@
     "images/*.png",
     "sprite/*.png"
   ]
->>>>>>> Stashed changes
 }
