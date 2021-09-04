@@ -169,7 +169,6 @@ function open(loc){
 }
 function openQuery(q){
   open("https://www.google.com/search?q="+encodeURIComponent("aisd "+q));
->>>>>>> Stashed changes
 }
 
 chrome.omnibox.onInputEntered.addListener(function(text) {
