@@ -1,0 +1,193 @@
+a.inactiveLink {
+	color: var(--main-text-color);
+}
+
+label {
+	color: var(--main-text-color);
+}
+
+fieldset legend {
+	color: var(--main-text-color)!important;
+}
+
+div.legend {
+	color: var(--main-text-color)!important;
+}
+
+.BrowseTitle {
+	color: var(--main-text-color);
+}
+
+div.browseWrap {
+	color: var(--main-text-color);
+}
+
+tr.BrowseBodySelected>td.BD label {
+	color: var(--main-text-color);
+}
+
+.BrowseBodySelected[detailrow] td,
+.bbSelected {
+	color: var(--main-text-color);
+}
+
+.BrowseDiv td[bgcolor],
+.browseFixedBodyDiv td[bgcolor] {
+	color: var(--main-text-color) !important;
+}
+
+.EditLabel {
+	color: var(--main-text-color);
+}
+
+.EditLabelL {
+	color: var(--main-text-color);
+}
+
+.EditLabelReq {
+	color: var(--main-text-color);
+}
+
+.EditLabelReqL {
+	color: var(--main-text-color);
+}
+
+.eelExtra {
+	color: var(--lighter-text-color);
+}
+
+#printMsgTitle,
+#printMsgTitle span {
+	color: var(--main-text-color) !important;
+}
+
+#utilityTable li.utilUser {
+	color: var(--main-text-color);
+}
+
+.recentPath {
+	color: var(--main-text-color);
+}
+
+#entityInput {
+	color: var(--main-text-color);
+}
+
+#entityList div.noresults {
+	color: var(--main-text-color);
+}
+
+#classLabel {
+	color: var(--lighter-text-color);
+}
+
+#classLabel a {
+	color: var(--lighter-text-color);
+}
+
+.favItemSystem {
+	color: var(--main-text-color);
+}
+
+#menu_favorites .noitems,
+#desktop_favorites .noitems,
+#desktop_printQueueWrap .noitems,
+#desktop_recentprogramsWrap .noitems {
+	color: var(--main-text-color);
+}
+
+#pageControlBar #pageTitle {
+	color: var(--main-text-color);
+}
+
+#mainNavBar a {
+	color: var(--main-text-color);
+}
+
+#mainNavBar a#nav_navSearch span.iconText,
+#mainNavBar a#nav_navSearch:hover span.iconText,
+#mainNavBar a#nav_navSearch:focus span.iconText {
+	color: var(--main-text-color)!important
+}
+
+#copyArea {
+	color: var(--lighter-text-color);
+}
+
+#infoArea {
+	color: var(--main-text-color);
+}
+
+div.titleArea td.titleCell {
+	color: var(--main-text-color);
+}
+
+div.navMenuWrap a.titleLink {
+	color: var(--main-text-color);
+}
+
+div.navSubMenuWrap a.titleLink,
+div.navSubMenuWrap a.closed {
+	color: var(--main-text-color);
+}
+
+div.noitems a.titleLink:hover span,
+div.noitems a.titleLink:focus span,
+div.open div.noitems a.titleLink {
+	color: var(--main-text-color);
+}
+
+div.nav_search input.navSearchBox,
+div.nav_search input[type='text'] {
+	color: var(--main-text-color);
+}
+
+div.nav_searchList div.noResults {
+	color: var(--main-text-color);
+}
+
+.itemPath {
+	color: var(--main-text-color);
+}
+
+div.desktopWidgetContent table td {
+	color: var(--main-text-color);
+}
+
+div.widgetContainer table tr.odd>td {
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
+}
+
+div.widgetContainer table tr.even>td {
+	color: var(--main-text-color);
+}
+
+div.desktopWidgetContent table td.headerCell {
+	color: var(--main-text-color);
+}
+
+div.desktopWidgetContent td.ss_label {
+	color: var(--main-text-color);
+}
+
+.tabToolsPanel {
+	color: var(--main-text-color);
+
+}
+
+.tabInfoTitle {
+	color: var(--main-text-color);
+}
+
+.tabProgramDesc {
+	color: var(--main-text-color);
+}
+
+.skyTip table {
+	color: var(--main-text-color);
+}
+
+.noResults {
+	color: var(--lighter-text-color);
+}

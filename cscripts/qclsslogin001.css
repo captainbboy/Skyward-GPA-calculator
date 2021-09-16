@@ -1,0 +1,80 @@
+body {
+    background: var(--main-bg-color) !important;
+}
+a {
+    color: var(--link-text-color);
+}
+a:hover {
+        color: var(--link-text-color);
+}
+#loginBoxWrap {
+    border-color: var(--slightly-slightly-darker-bg-color) var(--slighly-darker-bg-color) var(--darker-bg-color);
+}
+#loginHeaderWrap {
+    background-color: var(--slightly-slightly-darker-bg-color);
+    border-color: var(--main-bg-color) var(--slightly-slightly-darker-bg-color) var(--slighly-darker-bg-color);
+}
+#loginBodyWrap {
+    border-color: var(--darker-bg-color) var(--slighly-darker-bg-color) var(--slightly-slightly-darker-bg-color);
+}
+#loginBody {
+    background-color: var(--slightly-slightly-slightly-darker-bg-color); /* #F7F5F3; */
+    border-color: var(--slighly-darker-bg-color) var(--main-bg-color) var(--main-bg-color);
+    border-color: transparent;
+}
+.loginLabel {
+    color: var(--main-text-color);
+}
+
+#loginBody .loginLinks a {
+    color:var(--link-text-color);
+}
+#errorPanel.hasErrors {
+    background-color: var(--main-bg-color);
+}
+#version {
+    color: var(--lighter-text-color);
+}
+#copyArea {
+    color: var(--lighter-text-color);
+}
+#infoArea {
+    color: var(--main-text-color);
+}
+
+a.button {
+	background: var(--main-bg-color); /* Old browsers */
+        background: -moz-linear-gradient(top, var(--main-bg-color) 0%, var(--lighter-bg-color) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--main-bg-color)), color-stop(100%,var(--lighter-bg-color))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, var(--main-bg-color) 0%,var(--lighter-bg-color) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, var(--main-bg-color) 0%,var(--lighter-bg-color) 100%); /* Opera11.10+ */
+        background: -ms-linear-gradient(top, var(--main-bg-color) 0%,var(--lighter-bg-color) 100%); /* IE10+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--main-bg-color), endColorstr=var(--lighter-bg-color),GradientType=0 ); /* IE6-9 */
+        *filter:none!important;
+}
+a.button {
+    color:var(--link-text-color);
+}
+a.button:hover,
+a.button:active,
+a.button:focus {
+	background: var(--darker-bg-color); /* Old browsers */
+        background: -moz-linear-gradient(top, var(--main-bg-color) 0%, var(--darker-bg-color) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--main-bg-color)), color-stop(100%,var(--darker-bg-color))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, var(--main-bg-color) 0%,var(--darker-bg-color) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, var(--main-bg-color) 0%,var(--darker-bg-color) 100%); /* Opera11.10+ */
+        background: -ms-linear-gradient(top, var(--main-bg-color) 0%,var(--darker-bg-color) 100%); /* IE10+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--main-bg-color), endColorstr=var(--darker-bg-color),GradientType=0 ); /* IE6-9 */
+        *filter:none!important;
+        background: linear-gradient(top, var(--main-bg-color) 0%,var(--darker-bg-color) 100%); /* W3C */
+
+}
+a.button:hover,
+a.button:active,
+a.button:focus {
+        color:var(--link-text-color);
+}
+#adBottom {
+    margin: 10px 0;
+    text-align: center;
+}

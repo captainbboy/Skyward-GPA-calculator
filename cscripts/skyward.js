@@ -62,33 +62,33 @@ window.addEventListener("load", function() {
       if (result["skywardDarkTheme"] == true || result["skywardDarkTheme"] != false) {
         let variablesCSS = document.createElement("link")
         variablesCSS.rel = "STYLESHEET"
-        variablesCSS.href = chrome.extension.getURL("cscripts/css/variables.css");
+        variablesCSS.href = chrome.extension.getURL("cscripts/variables.css");
         document.head.appendChild(variablesCSS);
 
         let qsfmainCSS = document.createElement("link")
         qsfmainCSS.rel = "STYLESHEET"
-        qsfmainCSS.href = chrome.extension.getURL("cscripts/css/qsfmain001.css");
+        qsfmainCSS.href = chrome.extension.getURL("cscripts/qsfmain001.css");
         document.head.appendChild(qsfmainCSS);
 
         if (page != "seplog01.w") {
           let newElem2 = document.createElement("link")
           newElem2.rel = "STYLESHEET"
-          newElem2.href = chrome.extension.getURL("cscripts/css/sfhome001.css");
+          newElem2.href = chrome.extension.getURL("cscripts/sfhome001.css");
           document.head.appendChild(newElem2);
 
           let newElem4 = document.createElement("link")
           newElem4.rel = "STYLESHEET"
-          newElem4.href = chrome.extension.getURL("cscripts/css/sfgradebook001.css");
+          newElem4.href = chrome.extension.getURL("cscripts/sfgradebook001.css");
           document.head.appendChild(newElem4);
         } else {
           let newElem3 = document.createElement("link")
           newElem3.rel = "STYLESHEET"
-          newElem3.href = chrome.extension.getURL("cscripts/css/qclssbase001.css");
+          newElem3.href = chrome.extension.getURL("cscripts/qclssbase001.css");
           document.head.appendChild(newElem3);
 
           let newElem4 = document.createElement("link")
           newElem4.rel = "STYLESHEET"
-          newElem4.href = chrome.extension.getURL("cscripts/css/qclsslogin001.css");
+          newElem4.href = chrome.extension.getURL("cscripts/qclsslogin001.css");
           document.head.appendChild(newElem4);
 
           var children = document.getElementById("loginBrading").children
@@ -117,10 +117,17 @@ window.addEventListener("load", function() {
           }
         }
 
+        if(page == "sfstudentinfo001.w") {
+          let children = document.getElementById('grid_studentContactInfo110312').firstChild.children;
+          for (let i = 0; i < children.length; i++) {
+            if(children[i]?.firstChild?.firstChild.style.backgroundColor == "rgb(238, 238, 238)") children[i].firstChild.firstChild.style.backgroundColor = "var(--main-bg-color)"
+          }
+        }
+
         if (page == "sfcalendar002.w") {
           let calenderJQueryCSS = document.createElement("link")
           calenderJQueryCSS.rel = "STYLESHEET"
-          calenderJQueryCSS.href = chrome.extension.getURL("cscripts/css/jquery.cluetip.css");
+          calenderJQueryCSS.href = chrome.extension.getURL("cscripts/jquery.cluetip.css");
           document.head.appendChild(calenderJQueryCSS);
 
           let styleElements = document.getElementsByTagName("style");
@@ -165,29 +172,29 @@ window.addEventListener("load", function() {
 
         let oldCSS = document.getElementsByTagName("link");
 
-        for (let i = 0; i < oldCSS.length; i++) {
-          const element = oldCSS[i];
-          if (element.href.includes("qcssloader.p?file=sfgradebook.css")) {
-            element.remove();
-          }
-          /* // Has to stay commented for some reason bc it breaks gradebook without it.
-          if(element.href.includes("qcssloader.p?file=qsfmain001.css")) {
-            element.remove();
-          }
-          */
-          if (element.href.includes("qcssloader.p?file=sfhome001.cs")) {
-            element.remove();
-          }
-          if (element.href.includes("qcssloader.p?file=qclssbase001.css")) {
-            element.remove();
-          }
-          if (element.href.includes("qcssloader.p?file=qclsslogin001.css")) {
-            element.remove();
-          }
-          if (element.href.includes("qcssloader.p?file=jquery.cluetip.css")) {
-            element.remove();
-          }
-        }
+        // for (let i = 0; i < oldCSS.length; i++) {
+        //   const element = oldCSS[i];
+        //   if (element.href.includes("qcssloader.p?file=sfgradebook.css")) {
+        //     element.remove();
+        //   }
+        //   /* // Has to stay commented for some reason bc it breaks gradebook without it.
+        //   if(element.href.includes("qcssloader.p?file=qsfmain001.css")) {
+        //     element.remove();
+        //   }
+        //   */
+        //   if (element.href.includes("qcssloader.p?file=sfhome001.cs")) {
+        //     element.remove();
+        //   }
+        //   if (element.href.includes("qcssloader.p?file=qclssbase001.css")) {
+        //     element.remove();
+        //   }
+        //   if (element.href.includes("qcssloader.p?file=qclsslogin001.css")) {
+        //     element.remove();
+        //   }
+        //   if (element.href.includes("qcssloader.p?file=jquery.cluetip.css")) {
+        //     element.remove();
+        //   }
+        // }
       }
 
       if (window.location.pathname == "/scripts/wsisa.dll/WService=wsEAplus/sfgradebook001.w") {

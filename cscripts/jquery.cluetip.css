@@ -1,0 +1,16 @@
+  .cluetip-default {
+    background-color: var(--slightly-darker-bg-color);
+  }
+  .cluetip-default #cluetip-outer {
+    background-color: var(--slightly-darker-bg-color);
+  }
+  .cluetip-default h3#cluetip-title {
+    background-color: var(--darker-bg-color);
+    color: var(--main-text-color);
+  }
+  .cluetip-default #cluetip-title a {
+    color: var(--slightly-darker-bg-color);
+  }  
+  .cluetip-jtip #cluetip-outer {
+    background-color: var(--main-bg-color);
+  }

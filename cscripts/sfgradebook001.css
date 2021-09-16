@@ -1,0 +1,18 @@
+.cat td           {
+  background-color:var(--main-bg-color) !important;
+  color:var(--main-bg-color) !important
+}
+
+.eWs{background-color:var(--main-bg-color) !important;}
+
+.aC {background-color:var(--slightly-slightly-slightly-darker-bg-color) !important;}
+
+h2.gb_heading {color: var(--lighter-text-color);}
+
+@media print{
+  .cat > td{border-top:1px solid var(--link-text-color) !important; border-bottom:1px solid var(--link-text-color) !important}  
+  .noRBdr{border-right:1px solid var(--link-text-color) !important}
+  .noLBdr{border-left:1px solid var(--link-text-color) !important}
+}
+
+@page {margin:.5in}

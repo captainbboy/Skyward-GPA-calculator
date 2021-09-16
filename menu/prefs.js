@@ -164,13 +164,13 @@ chrome.storage.sync.get(null, function(result){
               if(l == 5) {
                 input.checked = true;
                 selectedGPAWeight[(i+1)] = l;
-            }
-            }  else {
+              }
+            } else {
               if(l == 4) {
                 input.checked = true;
                 selectedGPAWeight[(i+1)] = l;
               }
-            } 
+            }
           }
           input.onclick = function(e) {
             handleWeightSelection(e)
